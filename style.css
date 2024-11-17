@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    
+  }
+  /* nav start */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(56, 54, 54);    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #66FCF1;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #66FCF1;
+    color: #000;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+  
+  .hamburger span {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      display: none;
+      gap: 0;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+  
+    /* Show menu when checkbox is checked */
+    #nav-toggle:checked ~ .nav-links {
+      display: flex;
+    }
+  
+    /* Hamburger Icon Animation */
+    #nav-toggle:checked + .hamburger span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    #nav-toggle:checked + .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    #nav-toggle:checked + .hamburger span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+  /* Hide Checkbox */
+  #nav-toggle {
+    display: none;
+  }
+
+  /* about satrt */
+.mainAbout{
+    display: flex;
+    margin: 50px;
+    gap:10px
+  }  
+.img{
+    height:400px;
+    width:35% ;
+    border-radius:16px
+}
+.text{
+    width: 65%;
+
+}
+@media (max-width: 1000px) {
+    .mainAbout{
+        display: flex;
+       flex-direction:  column;
+       margin: 20px;
+
+    }  
+    .img{
+        height:400px;
+        width:100% ;
+    }
+    .text{
+        width: 100%;
+    
+    }
+}
+  /* about end */
+/* products  start */
+.productsMain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  margin: 50px;
+  grid-gap: 19px;
+
+}
+.productIndividual{
+  border: 2px solid #66FCF1;
+}
+@media  (max-width :1150px) {
+  .productsMain {
+      grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+@media (max-width :952px) {
+  .productsMain {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 20px;
+
+
+  }
+}
+@media (max-width :600px) {
+  .productsMain {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* products end */
+  /* contact start */
+.contactMe {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #66FCF1;
+
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgb(222, 216, 208); 
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #66FCF1;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: gray;
+}
+
+  /* contact end */
+
+  /* footer start */
+footer {width: 100%;       
+  min-height: 80px;
+  background-color: #333333;  
+  text-align: center;  
+  padding: 1rem;       
+  color: white;
+  margin-top:60px
+}
+/* footer end */
